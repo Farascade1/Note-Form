@@ -1,5 +1,5 @@
  import { useState } from "react"
-
+ import {toast, Toaster} from "react-hot-toast"
 
 function Form ({isClose, handle}){
        
@@ -19,6 +19,22 @@ function Form ({isClose, handle}){
                 setError(false)
             }, 4000);
         }
+        toast.success("Note has been deleted successfulys",{
+            posistion: "top-right",
+        })
+        const newNote = {
+            id: Date.now(),
+            title: title,
+            description: description
+        }
+       
+        const getData = localStorage.getItem("data")
+        let checkData = getData ? JSON.parse(getData) : []
+        checkData = [...checkData, newNote]
+        localStorage.setItem("data", JSON.stringify(checkData))
+
+
+      
 
 
     }
@@ -49,7 +65,7 @@ function Form ({isClose, handle}){
         </form>
     
     </div>
-     
+     <Toaster/>
     </div>
     )
 }

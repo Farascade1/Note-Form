@@ -8,7 +8,7 @@ function Header (){
 
     // handleOpenForm
 
-    const handleOpenForm =() =>{
+    const handleOpenForm = () =>{
         setIsOpen(true)
     }
 

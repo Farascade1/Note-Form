@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         srimaryColor: "#ABEF9",
-        secondaryColor: "#050C9C",
+        secondaryColor: "#050C9C"
       }
     },
   },
