@@ -19,7 +19,7 @@ function Form ({isClose, handle}){
                 setError(false)
             }, 4000);
         }
-        toast.success("Note has been deleted successfulys",{
+        toast.success("Note has been saved successfulys",{
             posistion: "top-right",
         })
         const newNote = {
